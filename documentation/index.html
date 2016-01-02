@@ -1,0 +1,185 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="media/style.css">
+ <script type="text/javascript" src="scripts/jquery/jquery-2.1.1.js"  ></script>
+<title>Security Scanning</title>
+
+<script>
+	jQuery(document).ready(function()
+		{
+
+			$(".goo-collapsible > li > a").on("click", function(e){
+				  
+				if(!$(this).hasClass("active")) {
+		
+				  // hide any open menus and remove all other classes
+					$(".goo-collapsible li ul").slideUp(350);
+					$(".goo-collapsible li a").removeClass("active");
+				  
+					// open our new menu and add the open class
+					$(this).next("ul").slideDown(350);
+					$(this).addClass("active");
+		
+				}else if($(this).hasClass("active")) {
+		
+					$(this).removeClass("active");
+					$(this).next("ul").slideUp(350);
+				}
+			}); 
+		});
+		
+		
+		jQuery(document).ready(function()
+		{
+		
+			$(".goo-collapsible2 > li > a").on("click", function(e){
+				  
+				if(!$(this).hasClass("active")) {
+		
+				  // hide any open menus and remove all other classes
+					$(".goo-collapsible2 li ul").slideUp(350);
+					$(".goo-collapsible2 li a").removeClass("active");
+				  
+					// open our new menu and add the open class
+					$(this).next("ul").slideDown(350);
+					$(this).addClass("active");
+		
+				}else if($(this).hasClass("active")) {
+		
+					$(this).removeClass("active");
+					$(this).next("ul").slideUp(350);
+				}
+			});
+		});
+			
+</script>
+
+
+
+</head>
+<body>
+	<div  id="frame" style="   top: 5%;left:10%;  width:80%;display:block;">
+		<h1 style="text-align:center">Vulnerabilities  Scanning</h1>
+		<hr></hr>
+		<div  id="frame2" style="   top: 5%;left:10%;  width:40%;display:block;     ">
+			<div style="position: relative;display:block;text-align:center;width:80%;   margin:auto; " >
+				<p  style="text-align:left; width:100%;font-size:105%  left:200px;font-size:125%">
+				  This Documentation provides information about installing and using port scanning tools,
+				  vulnerabilities scanning tools and sql injection scanning tools. Also provides basic information
+				  about these tools.
+				</p>
+			</div>
+		</div>
+		
+		<div class="menu">
+		
+			<ul class="goo-collapsible">
+				<li class="header" style=" font-size:1.3em;text-aling:center"><span class="round-button" > </span><b>Tools and Insall info:</b></li>
+				<hr></hr>
+				<li class='dropdown'><a class='' href='#' style=" font-size:1.3em">1. Tools Included</a>
+		        	 
+				 
+				      		 
+		
+								<ul class="goo-collapsible2">
+									 
+									<hr></hr>
+									<li class='dropdown2'><a class='' href='#' style=" font-size:1.3em; ">1.1 Nmap</a>
+							        	<ul>
+									       <li><p  style="position: relative; text-align: left;font-size:1.2em;width:80%;margin-left:8%;"> 
+												 Nmap ("Network Mapper") is a free and open source (license) utility for network discovery and security auditing. Many systems and network administrators also find it useful for tasks such as network inventory, managing service upgrade schedules, and monitoring host or service uptime. Nmap uses raw IP packets in novel ways to determine what hosts are available on the network, what services (application name and version) those hosts are offering, what operating systems (and OS versions) they are running, what type of packet filters/firewalls are in use, and dozens of other characteristics. It was designed to rapidly scan large networks, but works fine against single hosts. Nmap runs on all major computer operating systems, and official binary packages are available for Linux, Windows, and Mac OS X. In addition to the classic command-line Nmap executable, the Nmap suite includes an advanced GUI and results viewer (Zenmap), a flexible data transfer, redirection, and debugging tool (Ncat), a utility for comparing scan results (Ndiff), and a packet generation and response analysis tool (Nping).
+												 
+												 <br> <br>
+												 Nmap can be installed using yum.
+													</br></br>
+												    <a href="https://nmap.org/" > Nmap page<img src='media/link.png' style='margin-top:5px'></a></br>
+													<a href="http://www.shellhacks.com/en/20-Awesome-Nmap-Command-Examples" > Some Nmap commands <img src='media/link.png' style='margin-top:5px'></a></br>
+												</p></br>
+												 							
+											</li>
+										</ul>
+									</li>
+							        <hr></hr>
+							        <li  class='dropdown2'><a href='#' style=" font-size:1.3em"></span> 1.2 Nikto</a>
+							        	<ul>
+							         		 <li><p  style="position: relative; text-align: left;font-size:1.2em;width:80%;margin-left:8%;"> 
+												Nikto is an Open Source (GPL) web server scanner which performs comprehensive tests against web servers for multiple items, including over 6700 potentially dangerous files/programs, checks for outdated versions of over 1250 servers, and version specific problems on over 270 servers. It also checks for server configuration items such as the presence of multiple index files, HTTP server options, and will attempt to identify installed web servers and software. Scan items and plugins are frequently updated and can be automatically updated.
+												</br>For more information:
+												</br></br>
+												    <a href="https://cirt.net/Nikto2" > Home Page <img src='media/link.png' style='margin-top:5px'></a></br>
+											    	<a href="https://cirt.net/nikto2-docs/usage.html" > Some Nikto commands<img src='media/link.png' style='margin-top:5px'></a></br>
+												    <a href="https://github.com/sullo/nikto" > Git Hub Nikto <img src='media/link.png' style='margin-top:5px'></a></br>
+												
+												</p></br>
+																						
+							
+							
+											</li>
+										</ul>
+							        </li>
+							         <hr></hr>
+									 
+								      <li  class='dropdown2'><a href='#' style=" font-size:1.3em"></span> 1.3 SQLMap</a>
+							        	<ul>
+							         		 <li><p  style="position: relative; text-align: left;font-size:1.2em;width:80%;margin-left:8%;"> 
+												Sqlmap is an open source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws and taking over of database servers. It comes with a powerful detection engine, many niche features for the ultimate penetration tester and a broad range of switches lasting from database fingerprinting, over data fetching from the database, to accessing the underlying file system and executing commands on the operating system via out-of-band connections.
+												</br>For more information:
+												</br></br>
+												    <a href="http://sqlmap.org/" > Home Page <img src='media/link.png' style='margin-top:5px'></a></br>
+											    	<a href="http://www.binarytides.com/sqlmap-hacking-tutorial/" > Sqlmap Tutorial <img src='media/link.png' style='margin-top:5px'></a></br>
+												    <a href="https://github.com/sqlmapproject/sqlmap" > Git Hub Sqlmap <img src='media/link.png' style='margin-top:5px'></a></br>
+												
+												</p></br>
+																						
+							
+							
+											</li>
+										</ul>
+							        </li>
+							         <hr></hr>
+							   
+							     
+								</ul>
+							    
+							 
+							 
+							
+		
+		  
+				 
+		
+						 
+					 
+				</li>
+		        <hr></hr>
+		        <li  class='dropdown'><a href='#' style=" font-size:1.3em"></span> 2. Installation and User Guide</a>
+		        	<ul>
+		         		 <li><p  style="position: relative; text-align: leftnter;font-size:1.2em;margin-left:50px;padding-right:70px;">
+							  <b>The first step</b> is to run the install script in the scripts directory as root.
+							  This script will install nmap port scanner and also it will clone sqlmap and nikto repositories.
+							  </br></br><b>The second </b> very important step is to check if you have the "cluster" file in the parent directory(the directory above the scripts folder).    
+							  The "cluster" file must be named "cluster" with no extension. This file must contain all of the desired URLs or IPs, each of those on new line.
+							  </br></br><b>The next step</b> is to start the "run" script. You can do that as normal user. The execution may take a while, depending how big is the cluster.
+							  The script will generate <b>nmap</b> port scanning report for the cluster file. Important note is that the nmap also will generate 
+							  report even for URLs with multiple IPs. The report can be found in the nmap.log file in the parent directory.
+							  The script will make a vulnerability scan for every URL(IP) in the cluster using <b>nikto</b> vulnerability scanner.
+							  In the same way it will generate a report for all of the vulnerabilities in vulnerabilities.txt file in the parent directory.
+							  After the scanning with nikto and and nmap, the script will start <b>sqlmap</b> scan. This will not be generated in log file because sqlmap needs
+							  comunication with the user. It will generate a report in the terminal for any injectable parameters for every URL(IP).  
+							<br><br>
+							<b>Please Do NOT push log files to git!</b>							
+							</p></br>
+							 
+							
+		
+		
+						</li>
+					</ul>
+		        </li>
+		        <hr></hr>
+			</ul>
+		    
+		</div>
+	</div>
+</body>
+</html>
